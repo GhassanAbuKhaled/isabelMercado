@@ -1,0 +1,327 @@
+ :root {
+
+     --clr-accent-100: hsl(9, 33%, 96%);
+     --clr-neutral-900: hsl(0 0% 0%);
+
+     --ff-primary: 'Poppins', sans-serif;
+
+     --fw-regular: 400;
+     --fw-semi-bold: 500;
+     --fw-bold: 700;
+
+     --fs-300: 0.8125rem;
+     --fs-400: 0.875rem;
+     --fs-500: 0.9375rem;
+     --fs-600: 1rem;
+     --fs-700: 1.875rem;
+     --fs-800: 2.5rem;
+     --fs-900: 3.5rem;
+     --fs-1100: 4.84375;
+
+     --fs-body: var(--fs-300);
+     --fs-primary-heading: var(--fs-800);
+     --fs-secondary-heading: var(--fs-700);
+
+     --size-100: 0.25rem;
+     --size-200: 0.5rem;
+     --size-300: 0.75rem;
+     --size-400: 1rem;
+     --size-500: 1.5rem;
+     --size-600: 2rem;
+     --size-700: 3rem;
+     --size-800: 4rem;
+     --size-900: 5rem;
+
+
+ }
+
+ @media (min-width: 50em) {
+     :root {
+         --fs-body: var(--fs-600);
+         --fs-primary-heading: var(--fs-900);
+         --fs-secondary-heading: var(--fs-800);
+     }
+ }
+
+ /* https://piccalil.li/blog/a-modern-css-reset */
+
+ /* Box sizing rules */
+ *,
+ *::before,
+ *::after {
+     box-sizing: border-box;
+ }
+
+ /* Remove default margin */
+ * {
+     margin: 0;
+     padding: 0;
+     font: inherit;
+ }
+
+ /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ ul[role="list"],
+ ol[role="list"] {
+     list-style: none;
+ }
+
+ /* Set core root defaults */
+ html:focus-within {
+     scroll-behavior: smooth;
+ }
+
+ html,
+ body {
+     height: 100%;
+ }
+
+ /* Set core body defaults */
+
+ /* A elements that don't have a class get default styles */
+ a:not([class]) {
+     text-decoration-skip-ink: auto;
+ }
+
+ /* Make images easier to work with */
+ img,
+ picture,
+ svg {
+     max-width: 100%;
+     display: block;
+ }
+
+ /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+ @media (prefers-reduced-motion: reduce) {
+     html:focus-within {
+         scroll-behavior: auto;
+     }
+
+     *,
+     *::before,
+     *::after {
+         animation-duration: 0.01ms !important;
+         animation-iteration-count: 1 !important;
+         transition-duration: 0.01ms !important;
+         scroll-behavior: auto !important;
+     }
+ }
+
+
+ /* general styling */
+
+ body {
+     background-color: var(--clr-neutral-900);
+     color: var(--clr-accent-100);
+     font-family: var(--ff-primary);
+     font-size: var(--fs-body);
+     overflow-x: hidden;
+ }
+
+
+ /* Utility classes */
+
+ .fw-bold {
+     font-weight: var(--fw-bold);
+ }
+
+ .fw-semi-bold {
+     font-weight: var(--fw-semi-bold);
+ }
+
+ .fw-regular {
+     font-weight: var(--fw-regular);
+ }
+
+ .fs-primary-heading {
+     font-size: var(--fs-primary-heading);
+     line-height: 1.1;
+ }
+
+ .fs-secondary-heading {
+     font-size: var(--fs-secondary-heading);
+     line-height: 1.1;
+ }
+
+ .fs-300 {
+     font-size: var(--fs-300);
+ }
+
+ .fs-400 {
+     font-size: var(--fs-400);
+ }
+
+ .fs-500 {
+     font-size: var(--fs-500);
+ }
+
+ .fs-600 {
+     font-size: var(--fs-600);
+ }
+ .fs-700 {
+    font-size: var(--fs-700);
+}
+
+.fs-900 {
+    font-size: var(--fs-900);
+}
+
+
+ .padding-block-900 {
+     padding-block: var(--size-900);
+ }
+ .padding-block-600 {
+    padding-block: var(--size-600);
+}
+
+ .padding-block-400 {
+     padding-block: var(--size-400);
+ }
+
+ .padding-inline-600 {
+     padding-inline: var(--size-600);
+ }
+
+ .padding-inline-end-600 {
+    padding-inline-end: var(--size-600);
+}
+
+.margin-inline-end-900 {
+    padding-inline-end: var(--size-900);
+}
+ .margin-inline-end-700 {
+     margin-inline-end: var(--size-700);
+ }
+
+ .margin-inline-end-600 {
+     margin-inline-end: var(--size-600);
+ }
+
+ .margin-inline-end-300 {
+     margin-inline-end: var(--size-300);
+ }
+
+ .margin-inline-start-900 {
+     margin-inline-start: var(--size-900);
+ }
+
+ .margin-inline-start-700 {
+     margin-inline-start: var(--size-700);
+ }
+
+ .margin-inline-start-600 {
+     margin-inline-start: var(--size-600);
+ }
+ .margin-bottom-900 {
+    margin-block-end: var(--size-900);
+}
+
+ .margin-bottom-700 {
+     margin-block-end: var(--size-700);
+ }
+
+ .margin-bottom-500 {
+     margin-block-end: var(--size-500);
+ }
+
+ .margin-bottom-400 {
+     margin-block-end: var(--size-400);
+ }
+
+ .margin-bottom-300 {
+     margin-block-end: var(--size-300);
+ }
+
+ .grid_align_end {
+     align-self: flex-end;
+ }
+
+ .grid_align_center {
+     align-self: center;
+ }
+
+ .grid_justify_center {
+     justify-self: center;
+ }
+
+ .grid_justify_start {
+     justify-self: start;
+ }
+
+ .grid_justify_end {
+     justify-self: end;
+ }
+
+ .container {
+     --max-width: 1110px;
+     --container-padding: 2.3rem;
+
+     width: min(var(--max-width), 100% - (var(--container-padding) * 2));
+     margin-inline: auto;
+ }
+
+ .even-columns {
+     display: grid;
+     gap: 1.8rem;
+ }
+
+ @media (min-width: 58em) {
+     .even-columns {
+         grid-auto-flow: column;
+         grid-auto-columns: 1fr;
+     }
+ }
+
+ .even-rows {
+     display: grid;
+     grid-auto-flow: row;
+     gap: 2.9rem;
+ }
+
+ .d-flex {
+     display: flex;
+     width: 100%;
+ }
+ .line{
+    height: 1px;
+    width: 80%;
+    background-color: aliceblue;
+ }
+ /* show Element (animation) */
+ .showLeft,
+ .showLeft_slow,
+ .showRight,
+ .showImg,
+ .showUp {
+     opacity: 0;
+     filter: blur(5px);
+     transition: all 0.7s;
+ }
+
+ .showImg {
+     transition: all 0.3s;
+
+ }
+
+ .showLeft {
+     transform: translateX(50px);
+ }
+
+ .showRight {
+     transform: translateX(-50px);
+ }
+
+ .showLeft_slow {
+     transition: all 2s;
+     transform: translateX(-150px);
+ }
+
+ .showUp {
+     transition: all 1.5s;
+     transform: translateY(+150px);
+ }
+
+ .show {
+     opacity: 1;
+     filter: blur(0);
+     transform: translateX(0);
+ }
