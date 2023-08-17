@@ -265,7 +265,6 @@
 
  /* show Element (animation) */
  .showLeft,
- .showRight,
  .showImg,
  .showUp {
      opacity: 0;
@@ -281,11 +280,6 @@
  .showLeft {
      transform: translateX(var(--showLeft));
  }
-
- .showRight {
-     transform: translateX(var(--showRight));
- }
-
 
  .showUp {
      transition: all var(--transitionShowUp);
