@@ -36,6 +36,9 @@
      --showRight: 0;
      --showUp: 0;
 
+     --transition: 0s;
+     --transitionShowUp: 0s;
+     --transitionShowImg: 0s;
  }
 
  @media (min-width: 50em) {
@@ -46,6 +49,9 @@
          --showLeft: 50px;
          --showRight: -50px;
          --showUp: 50px;
+         --transition: 0.7s;
+         --transitionShowUp:  0.5s;        
+         --transitionShowImg:0.3s;  
      }
  }
 
@@ -163,21 +169,23 @@
  .fs-600 {
      font-size: var(--fs-600);
  }
- .fs-700 {
-    font-size: var(--fs-700);
-}
 
-.fs-900 {
-    font-size: var(--fs-900);
-}
+ .fs-700 {
+     font-size: var(--fs-700);
+ }
+
+ .fs-900 {
+     font-size: var(--fs-900);
+ }
 
 
  .padding-block-900 {
      padding-block: var(--size-900);
  }
+
  .padding-block-600 {
-    padding-block: var(--size-600);
-}
+     padding-block: var(--size-600);
+ }
 
  .padding-block-400 {
      padding-block: var(--size-400);
@@ -188,12 +196,13 @@
  }
 
  .padding-inline-end-600 {
-    padding-inline-end: var(--size-600);
-}
+     padding-inline-end: var(--size-600);
+ }
 
-.margin-inline-end-900 {
-    padding-inline-end: var(--size-900);
-}
+ .margin-inline-end-900 {
+     padding-inline-end: var(--size-900);
+ }
+
  .margin-inline-end-700 {
      margin-inline-end: var(--size-700);
  }
@@ -217,9 +226,10 @@
  .margin-inline-start-600 {
      margin-inline-start: var(--size-600);
  }
+
  .margin-bottom-900 {
-    margin-block-end: var(--size-900);
-}
+     margin-block-end: var(--size-900);
+ }
 
  .margin-bottom-700 {
      margin-block-end: var(--size-700);
@@ -287,11 +297,13 @@
      display: flex;
      width: 100%;
  }
- .line{
-    height: 1px;
-    width: 80%;
-    background-color: aliceblue;
+
+ .line {
+     height: 1px;
+     width: 80%;
+     background-color: aliceblue;
  }
+
  /* show Element (animation) */
  .showLeft,
  .showRight,
@@ -299,11 +311,11 @@
  .showUp {
      opacity: 0;
      filter: blur(5px);
-     transition: all 0.7s;
+     transition: all var(--transition);
  }
 
  .showImg {
-     transition: all 0.3s;
+     transition: all  var(--transitionShowImg);
 
  }
 
@@ -317,7 +329,7 @@
 
 
  .showUp {
-     transition: all 0.5s;
+     transition: all var(--transitionShowUp);
      transform: translateY(var(--showUp));
  }
 
