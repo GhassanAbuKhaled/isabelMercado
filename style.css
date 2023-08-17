@@ -48,7 +48,7 @@
          --showLeft: 50px;
          --showRight: -50px;
          --showUp: 50px;
-         --transition: 0.7s;
+         --transition: 1s;
          --transitionShowUp:  0.5s;        
          --transitionShowImg:0.3s;  
      }
@@ -146,7 +146,7 @@ a{
      font-size: var(--fs-primary-heading);
      line-height: 1.1;
  }
- 
+
  .fs-700 {
      font-size: var(--fs-700);
  }
