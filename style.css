@@ -32,9 +32,9 @@
      --size-800: 4rem;
      --size-900: 5rem;
 
-     --showLeft: 12px;
-     --showRight: -12px;
-     --showUp: 1px;
+     --showLeft: 0;
+     --showRight: 0;
+     --showUp: 0;
 
  }
 
@@ -294,7 +294,6 @@
  }
  /* show Element (animation) */
  .showLeft,
- .showLeft_slow,
  .showRight,
  .showImg,
  .showUp {
@@ -316,10 +315,6 @@
      transform: translateX(var(--showRight));
  }
 
- .showLeft_slow {
-     transition: all 2s;
-     transform: translateX(-150px);
- }
 
  .showUp {
      transition: all 0.5s;

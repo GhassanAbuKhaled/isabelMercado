@@ -14,7 +14,7 @@ const observer = new IntersectionObserver((entries) => {
   });
   
   // Select all elements with the "show" class
-  const showElements = document.querySelectorAll(".showLeft, .showRight , .showImg, .showLeft_slow, .showUp");
+  const showElements = document.querySelectorAll(".showLeft, .showRight , .showImg, .showUp");
   
   // Observe each show element for intersection changes
   showElements.forEach((el) => observer.observe(el));
