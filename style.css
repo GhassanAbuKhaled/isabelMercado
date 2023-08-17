@@ -32,6 +32,8 @@
      --size-800: 4rem;
      --size-900: 5rem;
 
+     --showLeft: 12px;
+     --showRight: -12px;
 
  }
 
@@ -40,6 +42,8 @@
          --fs-body: var(--fs-600);
          --fs-primary-heading: var(--fs-900);
          --fs-secondary-heading: var(--fs-800);
+         --showLeft: 50px;
+         --showRight: -50px;
      }
  }
 
@@ -303,11 +307,11 @@
  }
 
  .showLeft {
-     transform: translateX(50px);
+     transform: translateX(var(--showLeft));
  }
 
  .showRight {
-     transform: translateX(-50px);
+     transform: translateX(var(--showRight));
  }
 
  .showLeft_slow {
