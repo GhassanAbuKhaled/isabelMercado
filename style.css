@@ -32,11 +32,11 @@
      --size-800: 4rem;
      --size-900: 5rem;
 
-     --showLeft: 20px;
-     --showRight: 20px;
+     --showLeft: 25px;
+     --showRight: 25px;
      --showUp: 0;
 
-     --transition: 0.5s;
+     --transition: 0.6s;
      --transitionShowUp: 0s;
      --transitionShowImg: 0s;
  }
