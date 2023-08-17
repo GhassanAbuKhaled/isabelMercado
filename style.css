@@ -49,8 +49,8 @@
          --showRight: -50px;
          --showUp: 50px;
          --transition: 1s;
-         --transitionShowUp:  0.5s;        
-         --transitionShowImg:0.3s;  
+         --transitionShowUp: 0.5s;
+         --transitionShowImg: 0.3s;
      }
  }
 
@@ -92,10 +92,12 @@
  a:not([class]) {
      text-decoration-skip-ink: auto;
  }
-a{
-    text-decoration: none;
-   color: var(--clr-accent-100);
-}
+
+ a {
+     text-decoration: none;
+     color: var(--clr-accent-100);
+ }
+
  /* Make images easier to work with */
  img,
  picture,
@@ -191,6 +193,10 @@ a{
      align-self: center;
  }
 
+ .grid_align_start {
+     align-self: self-start;
+ }
+
  .grid_justify_center {
      justify-self: center;
  }
@@ -202,7 +208,6 @@ a{
  .grid_justify_end {
      justify-self: end;
  }
-
  .container {
      --max-width: 1110px;
      --container-padding: 2.3rem;
@@ -215,12 +220,25 @@ a{
      display: grid;
      gap: 1.8rem;
  }
-
+ .grid {
+    display: grid;
+    gap: 2.5rem;
+}
  @media (min-width: 58em) {
      .even-columns {
          grid-auto-flow: column;
          grid-auto-columns: 1fr;
      }
+     .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 5.5rem;
+    }
+   
+    .grid>*:nth-child(5) {
+        grid-column-start: 3;
+        grid-row-start: 2;
+    }
  }
 
  .even-rows {
@@ -240,6 +258,8 @@ a{
      background-color: var(--clr-accent-100);
  }
 
+
+
  /* show Element (animation) */
  .showLeft,
  .showRight,
@@ -251,7 +271,7 @@ a{
  }
 
  .showImg {
-     transition: all  var(--transitionShowImg);
+     transition: all var(--transitionShowImg);
 
  }
 
