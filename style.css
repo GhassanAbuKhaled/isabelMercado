@@ -224,22 +224,6 @@
     display: grid;
     gap: 2.4rem;
 }
- @media (min-width: 58em) {
-     .even-columns {
-         grid-auto-flow: column;
-         grid-auto-columns: 1fr;
-     }
-     .grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        row-gap: 5.5rem;
-    }
-   
-    .grid>*:nth-child(5) {
-        grid-column-start: 3;
-        grid-row-start: 2;
-    }
- }
 
  .even-rows {
      display: grid;
@@ -258,7 +242,22 @@
      background-color: var(--clr-accent-100);
  }
 
-
+ @media (min-width: 58em) {
+    .even-columns {
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+    }
+    .grid {
+       display: grid;
+       grid-template-columns: repeat(3, 1fr);
+       row-gap: 5.5rem;
+   }
+  
+   .grid>*:nth-child(5) {
+       grid-column-start: 3;
+       grid-row-start: 2;
+   }
+}
 
  /* show Element (animation) */
  .showLeft,
