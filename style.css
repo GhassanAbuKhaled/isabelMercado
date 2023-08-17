@@ -17,7 +17,7 @@
      --fs-900: 3.5rem;
      --fs-1100: 4.84375;
 
-     --fs-body: var(--fs-300);
+     --fs-body: var(--fs-400);
      --fs-primary-heading: var(--fs-800);
      --fs-secondary-heading: var(--fs-700);
 
@@ -42,7 +42,7 @@
 
  @media (min-width: 50em) {
      :root {
-         --fs-body: var(--fs-600);
+        --fs-body: var(--fs-600);
          --fs-primary-heading: var(--fs-900);
          --fs-secondary-heading: var(--fs-800);
      }
