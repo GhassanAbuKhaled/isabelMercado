@@ -222,7 +222,7 @@
  }
  .grid {
     display: grid;
-    gap: 2.5rem;
+    gap: 2.4rem;
 }
  @media (min-width: 58em) {
      .even-columns {
