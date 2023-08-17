@@ -45,14 +45,18 @@
          --fs-body: var(--fs-600);
          --fs-primary-heading: var(--fs-900);
          --fs-secondary-heading: var(--fs-800);
-         --showLeft: 50px;
-         --showRight: -50px;
-         --showUp: 50px;
-         --transition: 1s;
-         --transitionShowUp: 0.5s;
-         --transitionShowImg: 0.3s;
      }
  }
+ @media (min-width: 30em) {
+    :root {
+        --showLeft: 50px;
+        --showRight: -50px;
+        --showUp: 50px;
+        --transition: 1s;
+        --transitionShowUp: 0.5s;
+        --transitionShowImg: 0.3s;
+    }
+}
 
  /* https://piccalil.li/blog/a-modern-css-reset */
 
