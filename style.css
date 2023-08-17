@@ -34,6 +34,7 @@
 
      --showLeft: 12px;
      --showRight: -12px;
+     --showUp: 0px;
 
  }
 
@@ -44,6 +45,7 @@
          --fs-secondary-heading: var(--fs-800);
          --showLeft: 50px;
          --showRight: -50px;
+         --showUp: 150px;
      }
  }
 
@@ -321,7 +323,7 @@
 
  .showUp {
      transition: all 1.5s;
-     transform: translateY(+150px);
+     transform: translateY(var(--showUp));
  }
 
  .show {
