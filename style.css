@@ -293,7 +293,7 @@
     background-color: aliceblue;
  }
  /* show Element (animation) */
- .showLeft,
+/* .showLeft,
  .showLeft_slow,
  .showRight,
  .showImg,
@@ -331,3 +331,4 @@
      filter: blur(0);
      transform: translateX(0);
  }
+*/
