@@ -322,7 +322,7 @@
  }
 
  .showUp {
-     transition: all 1.5s;
+     transition: all 0.5s;
      transform: translateY(var(--showUp));
  }
 
