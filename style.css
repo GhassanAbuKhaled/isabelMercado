@@ -211,11 +211,14 @@
      justify-self: end;
  }
  .container {
-     --max-width: 1110px;
+  /*   --max-width: 1110px;
      --container-padding: 2.3rem;
 
      width: min(var(--max-width), 100% - (var(--container-padding) * 2));
      margin-inline: auto;
+  */
+    --max-width: 100vw;
+    max-width: var(--max-width);
  }
 
  .even-columns {
