@@ -84,9 +84,9 @@
         --showLeft: 50px;
         --showRight: -50px;
         --showUp: 50px;
-        --transition: 1s cubic-bezier(0.4, 0, 0.2, 1);
-        --transitionShowUp: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-        --transitionShowImg: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        --transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        --transitionShowUp: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        --transitionShowImg: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     }
 }
 
@@ -139,13 +139,13 @@
      max-width: 100%;
      display: block;
      border-radius: var(--radius-lg);
-     transition: var(--transition);
+     transition: transform 0.3s ease, filter 0.3s ease;
  }
  
  img:hover {
-     transform: scale(1.02);
-     box-shadow: var(--shadow-xl);
-     filter: brightness(1.1);
+     transform: scale(1.05);
+     filter: brightness(1.1) contrast(1.1);
+     cursor: pointer;
  }
 
  /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
@@ -587,4 +587,23 @@ body {
     font-family: 'Inter', sans-serif;
     background: #000;
     color: #f0f0f0;
+}
+.contact-link {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s ease;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.contact-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(5px);
+}
+
+.contact-link p {
+    margin: 0;
 }

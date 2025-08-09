@@ -71,14 +71,7 @@
     transition: var(--transition);
 }
 
-.hover-lift:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: var(--shadow-xl);
-}
 
-.hover-glow:hover {
-    box-shadow: 0 0 30px rgba(255, 165, 0, 0.3);
-}
 
 /* Modern Typography Effects */
 .text-gradient {
@@ -186,9 +179,7 @@
         grid-template-columns: 1fr;
     }
     
-    .hover-lift:hover {
-        transform: none;
-    }
+
 }
 
 /* Dark Mode Support (Optional) */
