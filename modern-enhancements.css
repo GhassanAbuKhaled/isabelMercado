@@ -1,0 +1,202 @@
+/* Modern Enhancements - Additional Styles */
+
+/* Custom Cursor (Optional) */
+.cursor {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--clr-accent);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transition: all 0.1s ease;
+    mix-blend-mode: difference;
+}
+
+/* Modern Navigation (if needed) */
+.nav {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    z-index: 1000;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.nav-dot.active,
+.nav-dot:hover {
+    background: var(--clr-accent);
+    transform: scale(1.2);
+}
+
+/* Enhanced Grid Layouts */
+.masonry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--size-600);
+    align-items: start;
+}
+
+.masonry-item {
+    break-inside: avoid;
+    margin-bottom: var(--size-600);
+}
+
+/* Modern Loading States */
+.skeleton {
+    background: linear-gradient(90deg, 
+        rgba(255,255,255,0.1) 25%, 
+        rgba(255,255,255,0.2) 50%, 
+        rgba(255,255,255,0.1) 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* Advanced Hover Effects */
+.hover-lift {
+    transition: var(--transition);
+}
+
+.hover-lift:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: var(--shadow-xl);
+}
+
+.hover-glow:hover {
+    box-shadow: 0 0 30px rgba(255, 165, 0, 0.3);
+}
+
+/* Modern Typography Effects */
+.text-gradient {
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.text-shadow {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Glassmorphism Effects */
+.glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius-xl);
+}
+
+/* Modern Form Styles (if needed) */
+.form-group {
+    position: relative;
+    margin-bottom: var(--size-600);
+}
+
+.form-input {
+    width: 100%;
+    padding: var(--size-400) var(--size-500);
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius);
+    color: var(--clr-primary);
+    font-size: var(--fs-500);
+    transition: var(--transition);
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--clr-accent);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.form-label {
+    position: absolute;
+    top: var(--size-400);
+    left: var(--size-500);
+    color: var(--clr-neutral-200);
+    transition: var(--transition);
+    pointer-events: none;
+}
+
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+    top: -var(--size-300);
+    left: var(--size-300);
+    font-size: var(--fs-300);
+    color: var(--clr-accent);
+}
+
+/* Advanced Grid Animations */
+.grid-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: var(--transition-slow);
+}
+
+.grid-item.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.grid-item:nth-child(1) { transition-delay: 0.1s; }
+.grid-item:nth-child(2) { transition-delay: 0.2s; }
+.grid-item:nth-child(3) { transition-delay: 0.3s; }
+.grid-item:nth-child(4) { transition-delay: 0.4s; }
+.grid-item:nth-child(5) { transition-delay: 0.5s; }
+.grid-item:nth-child(6) { transition-delay: 0.6s; }
+
+/* Modern Progress Indicators */
+.progress-bar {
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--gradient-primary);
+    border-radius: var(--radius);
+    transition: width var(--transition-slow);
+}
+
+/* Enhanced Mobile Responsiveness */
+@media (max-width: 768px) {
+    .nav {
+        top: 1rem;
+        right: 1rem;
+    }
+    
+    .masonry-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hover-lift:hover {
+        transform: none;
+    }
+}
+
+/* Dark Mode Support (Optional) */
+@media (prefers-color-scheme: light) {
+    :root {
+        --clr-neutral-900: hsl(0, 0%, 98%);
+        --clr-neutral-800: hsl(0, 0%, 95%);
+        --clr-primary: hsl(220, 13%, 13%);
+        --gradient-dark: linear-gradient(135deg, hsl(0, 0%, 98%) 0%, hsl(0, 0%, 95%) 100%);
+    }
+}

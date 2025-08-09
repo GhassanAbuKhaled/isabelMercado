@@ -1,20 +1,32 @@
-// Create an IntersectionObserver to track elements' visibility changes
+// Optimized Intersection Observer
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
 const observer = new IntersectionObserver((entries) => {
-    // Iterate through each observed entry
     entries.forEach((entry) => {
-        // If the element is currently intersecting the viewport
         if (entry.isIntersecting) {
-            // Add the "show" class to reveal the element
             entry.target.classList.add("show");
-        } else {
-            // Otherwise, remove the "show" class to hide the element
-            entry.target.classList.remove("show");
+            observer.unobserve(entry.target); // Stop observing once shown
         }
     });
-  });
-  
-  // Select all elements with the "show" class
-  const showElements = document.querySelectorAll(".showLeft, .showImg, .showUp");
-  
-  // Observe each show element for intersection changes
-  showElements.forEach((el) => observer.observe(el));
+}, observerOptions);
+
+// Observe elements
+const showElements = document.querySelectorAll(".showLeft, .showImg, .showUp");
+showElements.forEach((el) => observer.observe(el));
+
+// Optimized image loading
+const images = document.querySelectorAll('img[loading="lazy"]');
+const imageObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const img = entry.target;
+            img.classList.add('fade-in-up');
+            imageObserver.unobserve(img);
+        }
+    });
+});
+
+images.forEach(img => imageObserver.observe(img));

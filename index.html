@@ -7,14 +7,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins&family=Questrial&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
+      media="print" onload="this.media='all'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="modern-enhancements.css" />
   </head>
   <body>
     <!-- First Page -->
@@ -26,11 +34,13 @@
             src="./assets/hero1.png"
             alt="Girl drawing on a notebook"
             class="showImg grid_justify_center"
+            loading="lazy"
           />
           <img
             src="./assets/hero2.png"
             alt="A table with a book and glasses on it"
             class="showImg grid_align_end"
+            loading="lazy"
           />
 
           <h1
@@ -56,9 +66,6 @@
             class="showLeft"
           />
         </div>
-        <p class="grid_justify_end grid_align_end showLeft">
-          &copy; 2022-2023 Isabel Mercado
-        </p>
       </div>
     </section>
 
@@ -92,9 +99,9 @@
     <!----------------------------------------------end of the Second Page ------------------------------------------------->
     <section class="padding-block-900 showUp">
       <div class="container even-columns">
-        <div class="even-rows">
+        <div>
           <h1 class="fs-primary-heading">MY ARTISTIC JOURNEY</h1>
-          <div class="line grid_align_end"></div>
+          <div class="line"></div>
         </div>
 
         <div class="even-rows grid_justify_end grid_align_end">
@@ -186,7 +193,7 @@
           <img
             src="./assets/FifthPage1.png"
             alt="A table with some accessories similar to cups"
-            class="grid_justify_end margin-inline-end-600"
+            class="grid_justify_end margin-inline-end-600 showImg"
           />
           <img
             src="./assets/FifthPage2.png"
@@ -206,7 +213,7 @@
             FASHION
           </h1>
           <h5 class="margin-bottom-400 showLeft">On the streets</h5>
-          <p>Old magazines, posters, and their</p>
+          <p class="showLeft">Old magazines, posters, and their</p>
           <p class="margin-bottom-700 showLeft">
             transformation into street art
           </p>
@@ -226,47 +233,51 @@
       </div>
     </section>
     <!--------------------------------------- end of page six --------------------------------------------------->
-    <section class="padding-block-900">
+    <section class="padding-block-900 showUp">
       <div class="container even-columns">
         <div class="even-rows">
           <h1 class="fs-primary-heading showLeft">GET IN TOUCH</h1>
           <div
             class="grid_justify_start even-rows padding-inline-600 padding-block-400"
           >
-            <div class="d-flex showLeft">
-              <i class="bi bi-geo-alt-fill margin-inline-end-600"></i>
-              <p>Address: 123 Anywhere St., Any City State, Country 12345</p>
+            <div class="d-flex showLeft" style="align-items: center; margin-bottom: 1rem;">
+              <i class="bi bi-geo-alt-fill contact-icon"></i>
+              <p>Address: 123 Art Street, Creative City</p>
             </div>
-
-            <div class="d-flex showLeft">
-              <i class="bi bi-envelope-fill margin-inline-end-600"></i>
-              <a href="mailto:hello@reallygreatsite.com"
-                >Email: hello@reallygreatsite.com</a
-              >
+            <div class="d-flex showLeft" style="align-items: center; margin-bottom: 1rem;">
+              <i class="bi bi-envelope-fill contact-icon"></i>
+              <p>isabel@creativeart.com</p>
             </div>
-
-            <div class="d-flex showLeft">
-              <i class="bi bi-telephone-forward-fill margin-inline-end-600"></i>
-              <p>Phone: (123) 456 7890</p>
+            <div class="d-flex showLeft" style="align-items: center; margin-bottom: 1rem;">
+              <i class="bi bi-telephone-fill contact-icon"></i>
+              <p>+1 (555) 123-4567</p>
             </div>
           </div>
         </div>
-
-        <div class="even-rows">
+        <div class="even-rows grid_justify_center">
           <img
             src="./assets/lastPage1.png"
-            alt="Two women checking out some accessories"
-            class="grid_justify_end showImg"
+            alt="Contact image 1"
+            class="showImg"
           />
           <img
             src="./assets/lastPage2.png"
-            alt="A table with some accessories similar to cups"
-            class="grid_justify_center showImg showLeft"
+            alt="Contact image 2"
+            class="showImg showLeft"
           />
         </div>
       </div>
     </section>
-
+    
+    <!-- Footer -->
+    <footer class="padding-block-400">
+      <div class="container">
+        <p style="text-align: center; color: #f0f0f0;">
+          &copy; 2022-2023 Isabel Mercado
+        </p>
+      </div>
+    </footer>
+    
     <script src="app.js"></script>
   </body>
 </html>
